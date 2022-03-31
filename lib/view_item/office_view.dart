@@ -25,54 +25,54 @@ class OfficeView extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(16),
-              child: Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SmallText(
-                      text: "Office No.248/3 patients",
-                      textSize: 14,
-                    ),
-                    const SizedBox(height: 10),
-                    Row(
-                      children: const [
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Icon(
-                          Icons.timer,
-                          color: Colors.white,
-                        ),
-                        SizedBox(width: 10),
-                        SmallText(
-                          text: "8:30 AM-02:00PM",
-                          textSize: 12,
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 10),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                            //mainAxisSize: MainAxisSize.min,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SmallText(
+                    text: "Office No.248/3 patients",
+                    textSize: 14,
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    children: const [
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Icon(
+                        Icons.timer,
+                        color: Colors.white,
+                      ),
+                      SizedBox(width: 10),
+                      SmallText(
+                        text: "8:30 AM-02:00PM",
+                        textSize: 12,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 220,
+                        child: Row(
                             children: office.profileUrl.map((url) {
-                          return SizedBox(
-                              height: 30,
-                              child: CircleAvatar(
-                                backgroundImage: NetworkImage(url),
-                              ));
-                        }).toList()),
-                        const Icon(
-                          Icons.check_circle,
-                          color: Colors.white,
-                          size: 30,
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              ),
+                              return SizedBox(
+                                  height: 30,
+                                  child: CircleAvatar(
+                                    backgroundImage: NetworkImage(url),
+                                  ));
+                            }).toList()),
+                      ),
+                      const Icon(
+                        Icons.check_circle,
+                        color: Colors.white,
+                        size: 30,
+                      )
+                    ],
+                  )
+                ],
+              )
             ),
           ],
         ),

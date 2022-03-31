@@ -26,20 +26,33 @@ class HomePage extends StatelessWidget {
           children: [
             const MyPatientSection(),
             Container(
-              padding: const EdgeInsets.only(top: 70 ,left: 16,right: 16),
+              padding: const EdgeInsets.only(top: 70, left: 16, right: 16),
               child: Row(
                 children: [
                   SizedBox(
                     height: 500,
-                    width: 100,
+                    width: 80,
                     child: ListView.separated(
                       separatorBuilder: (builder, index) => const SizedBox(
                         height: 20,
                       ),
                       itemCount: times.length,
-                      itemBuilder: (builder, index) =>
-                          SmallText(text: times[index].time ?? "",
-                            textColors: Colors.black,textSize: 17,),
+                      itemBuilder: (builder, index) => SmallText(
+                        text: times[index].time ?? "",
+                        textColors: Colors.black,
+                        textSize: 17,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 500,
+                    width: 300,
+                    child: ListView.builder(
+                      itemCount: events.length,
+                      itemBuilder: (builder, index) => EventView(
+                       event: events[index],
+
+                      ),
                     ),
                   )
                 ],
@@ -68,10 +81,10 @@ class OfficeSectionView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 16, top: 20),
+      width: 600,
       height: 140,
       child: ListView.builder(
         itemCount: offices.length,
-        shrinkWrap: true,
         physics: const ScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => Padding(

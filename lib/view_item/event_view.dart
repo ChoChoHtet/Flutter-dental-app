@@ -10,23 +10,32 @@ class EventView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: SizedBox(
-        width: 200,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Container(
         height: 100,
+        padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Icon(
               Icons.style,
-              size: 50,
+              size: 30,
               color: blueLightColor,
             ),
+            const SizedBox(width: 10,),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 SmallText(
                   text: event.name ?? "",
                   textColors: Colors.black54,
                   textSize: 16,
                 ),
+                const SizedBox(height: 10,),
                 Row(
                   children: [
                     const Icon(
