@@ -29,11 +29,11 @@ var officeList = [
   ),
 ];
 var timeList = [
-  TimeVO(1, "8:00"),
-  TimeVO(2, "8:30"),
-  TimeVO(3, "9:00"),
-  TimeVO(4, "9:30"),
-  TimeVO(5, "10:00"),
+  TimeVO(1, "10:30"),
+  TimeVO(2, "11:00"),
+  TimeVO(3, "11:30"),
+  TimeVO(4, "12:00"),
+  TimeVO(5, "12:30"),
   TimeVO(6, "10:30"),
   TimeVO(7, "11:00"),
   TimeVO(8, "11:30")

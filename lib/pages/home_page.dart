@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dental_app/components/time_and_event_view.dart';
+import 'package:flutter_dental_app/pages/detail_page.dart';
 import 'package:flutter_dental_app/resources/colors.dart';
 import 'package:flutter_dental_app/resources/dimens.dart';
 import 'package:flutter_dental_app/view_item/event_view.dart';
@@ -10,6 +12,8 @@ import 'package:flutter_dental_app/vos/time_vo.dart';
 import 'package:flutter_dental_app/widgets/custom_circle_avatar_view.dart';
 import 'package:flutter_dental_app/widgets/medium_text.dart';
 import 'package:flutter_dental_app/widgets/small_text.dart';
+
+import '../widgets/appointment_section_view.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -27,73 +31,25 @@ class HomePage extends StatelessWidget {
             const MyPatientSection(),
             Container(
               padding: const EdgeInsets.only(top: 70, left: 16, right: 16),
-              child: Row(
-                children: [
-                  SizedBox(
-                    height: 500,
-                    width: 80,
-                    child: ListView.separated(
-                      separatorBuilder: (builder, index) => const SizedBox(
-                        height: 20,
-                      ),
-                      itemCount: times.length,
-                      itemBuilder: (builder, index) => SmallText(
-                        text: times[index].time ?? "",
-                        textColors: Colors.black,
-                        textSize: 17,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 500,
-                    width: 300,
-                    child: ListView.builder(
-                      itemCount: events.length,
-                      itemBuilder: (builder, index) => EventView(
-                       event: events[index],
-
-                      ),
-                    ),
-                  )
-                ],
-              ),
+              child: TimeAndEventView(),
             ),
           ],
         ),
         Positioned(
           top: MediaQuery.of(context).size.height / 5.2,
-          child: OfficeSectionView(offices: offices),
+          child: AppointmentSectionView(
+            offices: offices,
+            isHomePage: true,
+            onTapCard: () => _navigateDetailPage(context),
+          ),
         )
       ],
     ));
   }
-}
 
-class OfficeSectionView extends StatelessWidget {
-  const OfficeSectionView({
-    Key? key,
-    required this.offices,
-  }) : super(key: key);
-
-  final List<OfficeVO> offices;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(left: 16, top: 20),
-      width: 600,
-      height: 140,
-      child: ListView.builder(
-        itemCount: offices.length,
-        physics: const ScrollPhysics(),
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.only(right: 10),
-            child: OfficeView(
-              office: offices[index],
-            )),
-      ),
-    );
+  void _navigateDetailPage(BuildContext context) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => DetailPage()));
   }
 }
 
