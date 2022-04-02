@@ -17,6 +17,7 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
+    var screenWidth = MediaQuery.of(context).size.width;
     var topHeight = screenHeight * 0.35;
     var centerHeight = screenHeight * 0.45;
     var bottomHeight = screenHeight * 0.05;
@@ -86,6 +87,42 @@ class DetailPage extends StatelessWidget {
               top: topHeight * 0.5,
               left: 60,
               child: const CustomCirclePaint(),
+            ),
+            Positioned(
+              top: screenHeight *0.2,
+              left: screenWidth *0.69,
+              child: Container(
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(25)
+                ),
+              ),
+            ),
+            Positioned(
+              top: screenHeight *0.4,
+              left: screenWidth *0.13,
+              child: Container(
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25)
+                ),
+              ),
+            ),
+            Positioned(
+              top: screenHeight *0.47,
+              left: screenWidth *0.44,
+              child: Container(
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(25)
+                ),
+              ),
             ),
             Positioned(
               top: screenHeight *0.55,
