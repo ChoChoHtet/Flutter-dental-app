@@ -95,8 +95,11 @@ class DetailPage extends StatelessWidget {
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: todayButtonColor,
                     borderRadius: BorderRadius.circular(25)
+                ),
+                child: Center(
+                  child: Image.asset("assets/injection.png"),
                 ),
               ),
             ),
@@ -107,8 +110,11 @@ class DetailPage extends StatelessWidget {
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: todayButtonColor,
                   borderRadius: BorderRadius.circular(25)
+                ),
+                child: Center(
+                  child: Image.asset("assets/tooth.png"),
                 ),
               ),
             ),
@@ -119,8 +125,11 @@ class DetailPage extends StatelessWidget {
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: todayButtonColor,
                     borderRadius: BorderRadius.circular(25)
+                ),
+                child: Center(
+                  child: Image.asset("assets/light.png"),
                 ),
               ),
             ),
