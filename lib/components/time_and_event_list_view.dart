@@ -150,6 +150,7 @@ class ItemDividerView extends StatelessWidget {
             width: 2,
             height: 120,
             color: Colors.black54,
+            margin: const EdgeInsets.only(left: 3.5),
           ),
         ),
         Visibility(
