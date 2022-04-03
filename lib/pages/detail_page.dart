@@ -126,6 +126,8 @@ class DetailPage extends StatelessWidget {
             ),
             Positioned(
               top: screenHeight *0.55,
+              left: 1,
+              right: 1,
               child: AppointmentSectionView(
                 offices: offices,
                 isHomePage: false,
