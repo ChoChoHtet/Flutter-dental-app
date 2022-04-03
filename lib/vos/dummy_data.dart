@@ -29,14 +29,14 @@ var officeList = [
   ),
 ];
 var timeList = [
-  TimeVO(1, "10:30"),
+  TimeVO(1, "8:30"),
   TimeVO(2, "11:00"),
   TimeVO(3, "11:30"),
   TimeVO(4, "12:00"),
   TimeVO(5, "12:30"),
-  TimeVO(6, "10:30"),
-  TimeVO(7, "11:00"),
-  TimeVO(8, "11:30")
+  TimeVO(6, "01:30"),
+  TimeVO(7, "02:00"),
+  TimeVO(8, "03:30")
 
 ];
 
@@ -44,4 +44,5 @@ var eventList = [
   EventVO(1, "Hello Testing 1", "8:00", "8:30"),
   EventVO(2, "Hello Testing 2", "9:00", "9:30"),
   EventVO(3, "Hello Testing 2", "10:00", "10:30"),
+  EventVO(4, "Hello Testing 2", "9:00", "9:30"),
 ];

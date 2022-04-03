@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dental_app/components/time_and_event_list_view.dart';
 import 'package:flutter_dental_app/components/time_and_event_view.dart';
 import 'package:flutter_dental_app/pages/detail_page.dart';
 import 'package:flutter_dental_app/resources/colors.dart';
@@ -23,15 +24,19 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: timeAndEventColor,
         body: Stack(
       children: [
         Column(
           children: [
             const MyPatientSection(),
             Container(
-              padding: const EdgeInsets.only(top: 70, left: 16, right: 16),
-              child: TimeAndEventView(),
+              padding: const EdgeInsets.only(top: 70, left: 16),
+              height: screenHeight *0.7,
+              //child: TimeAndEventView(),
+              child:  const TimeAndEventListView(),
             ),
           ],
         ),

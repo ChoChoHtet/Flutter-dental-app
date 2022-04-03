@@ -6,3 +6,5 @@ const todayButtonColor = Color.fromRGBO(59, 151, 248, 1.0);
 const detailTopColor = Color.fromRGBO(23, 75, 166, 1.0);
 const detailBottomColor = Color.fromRGBO(15, 64, 145, 1.0);
 const midCircleColor = Color.fromRGBO(33, 88, 187, 1.0);
+const  timeAndEventColor= Color.fromRGBO(242, 245, 253, 1.0);
+const disableEventColor = Color.fromRGBO(227, 233, 245, 1.0);

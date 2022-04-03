@@ -54,62 +54,65 @@ class OfficeView extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(marginMedium),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const TimeView(
-                          timeColor: Colors.black38,
-                        ),
-                       Container(
-                         padding: const EdgeInsets.symmetric(vertical: 4,horizontal: 8),
-                         decoration: BoxDecoration(
-                           borderRadius: BorderRadius.circular(4),
-                           border: Border.all(color: Colors.black12,width: 1)
-                         ),
-                          child:const SmallText(text: "Confirmed",
-                          textSize: smallTextSize,
-                          textColors: Colors.greenAccent,),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: marginSmall,
-                    ),
-                    const MediumText(
-                      text: "Tee Drilling",
-                      textColors: Colors.black,
-                    ),
-                    const SizedBox(
-                      height: marginMedium,
-                    ),
-                    const SmallText(
-                      text:
-                          "Whatever I said, whatever I did I didn't mean it I just want you back for good)",
-                      textSize: smallTextSize,
-                      textColors: Colors.black45,
-                    ),
-                    const SizedBox(
-                      height: marginMedium,
-                    ),
-                    Row(
-                      children: const [
-                        CustomCircleAvatarView(),
-                        SizedBox(
-                          width: marginMedium,
-                        ),
-                        SmallText(
-                          text: "Aye John",
-                          textColors: Colors.black38,
-                          textSize: smallTextSize,
-                        )
-                      ],
-                    )
-                  ],
+              Visibility(
+                visible: !isHomePage,
+                child: Padding(
+                  padding: const EdgeInsets.all(marginMedium),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const TimeView(
+                            timeColor: Colors.black38,
+                          ),
+                         Container(
+                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal: 8),
+                           decoration: BoxDecoration(
+                             borderRadius: BorderRadius.circular(4),
+                             border: Border.all(color: Colors.black12,width: 1)
+                           ),
+                            child:const SmallText(text: "Confirmed",
+                            textSize: smallTextSize,
+                            textColors: Colors.greenAccent,),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: marginSmall,
+                      ),
+                      const MediumText(
+                        text: "Tee Drilling",
+                        textColors: Colors.black,
+                      ),
+                      const SizedBox(
+                        height: marginMedium,
+                      ),
+                      const SmallText(
+                        text:
+                            "Whatever I said, whatever I did I didn't mean it I just want you back for good)",
+                        textSize: smallTextSize,
+                        textColors: Colors.black45,
+                      ),
+                      const SizedBox(
+                        height: marginMedium,
+                      ),
+                      Row(
+                        children: const [
+                          CustomCircleAvatarView(),
+                          SizedBox(
+                            width: marginMedium,
+                          ),
+                          SmallText(
+                            text: "Aye John",
+                            textColors: Colors.black38,
+                            textSize: smallTextSize,
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               )
             ],

@@ -10,6 +10,7 @@ class EventView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var screenWidth = MediaQuery.of(context).size.width;
     return Opacity(
       opacity: isPassed ? 0.3 :1,
       child: Card(
@@ -17,6 +18,7 @@ class EventView extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         child: Container(
+          width: screenWidth *0.7,
           height: 100,
           padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
           child: Row(
