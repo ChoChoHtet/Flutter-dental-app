@@ -42,6 +42,8 @@ class HomePage extends StatelessWidget {
         ),
         Positioned(
           top: MediaQuery.of(context).size.height / 5.2,
+          left: 1,
+          right: 1,
           child: AppointmentSectionView(
             offices: offices,
             isHomePage: true,

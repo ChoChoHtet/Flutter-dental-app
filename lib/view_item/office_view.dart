@@ -41,8 +41,8 @@ class OfficeView extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const SmallText(
-                              text: "Office No.248/3 patients",
+                             SmallText(
+                              text: "${office.officeName ?? ""}/3 patients",
                               textSize: 14,
                             ),
                             const SizedBox(height: 10),

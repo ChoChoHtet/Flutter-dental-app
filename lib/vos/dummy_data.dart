@@ -13,7 +13,7 @@ var officeList = [
   ),
   OfficeVO(
       2,
-      "Office No. 246",
+      "Office No. 111",
       6,
       "08:00 AM - 02:00 PM",
       ["https://media.wired.com/photos/5d960eba01e4a4000826137c/master/pass/Culture_Monitor_WillSmith-465783654.jpg",
@@ -21,7 +21,7 @@ var officeList = [
   ),
   OfficeVO(
       3,
-      "Office No. 246",
+      "Office No. 222",
       9,
       "08:00 AM - 02:00 PM",
       ["https://media.wired.com/photos/5d960eba01e4a4000826137c/master/pass/Culture_Monitor_WillSmith-465783654.jpg",
